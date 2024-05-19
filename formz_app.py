@@ -36,6 +36,7 @@ st.image('assets/foss-ddn.png')
 st.header('FOSS United Dehradun Volunteer Form')
 
 
+
 # Initialize the session state variable
 if 'page' not in st.session_state:
     st.session_state['page'] = 'form'
@@ -44,7 +45,32 @@ if 'page' not in st.session_state:
 if st.session_state['page'] == 'form':
     form=st.form(key='my_form')
     
-    
+    form.markdown("""
+                  ## Who are we?
+
+We are a dynamic community dedicated to advancing open-source technology. FOSS United is a non-profit foundation that aims at promoting & strengthening the Free and Open Source Software (FOSS) ecosystem in India.
+
+### We're seeking volunteers for:
+
+- Event Management
+- Graphic Designing
+- Video Editing
+
+One who is interested in contributing to FOSS Projects
+and promoting FOSS Ecosystem
+
+
+### Perks of Volunteering:
+
+- Gain exposure
+- access to exclusive swags & goodies
+- valuable experience
+- the opportunity to collaborate on exciting FOSS projects. 
+
+Join a community of like minded individuals ready to make a change in the tech world!
+                  
+                  
+                  """)
     form_name=form.text_input('What should we call you? *')
     
     form_college=form.text_input('Which University are you currently enrolled in? *')
